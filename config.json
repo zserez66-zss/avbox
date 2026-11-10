@@ -3,6 +3,15 @@
   "wallpaper": "",
   "sites": [
     {
+      "key": "17cap_spider",
+      "name": "17cap",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/17cap_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "1anime_spider",
       "name": "1anime",
       "type": 3,
@@ -21,10 +30,46 @@
       "filterable": 1
     },
     {
+      "key": "asmrhoney_spider",
+      "name": "ASMRHoney",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/asmrhoney_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "asmrlib_spider",
       "name": "asmrlib",
       "type": 3,
       "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/asmrlib_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "asmrone_spider-1",
+      "name": "ASMR.one",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/asmrone_spider-1.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "avbebe_spider",
+      "name": "Avbebe",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/avbebe_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "avgle_spider",
+      "name": "Avgle",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/avgle_spider.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -48,6 +93,15 @@
       "filterable": 1
     },
     {
+      "key": "hstream_spider",
+      "name": "HStream",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/hstream_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "idolcomplex_spider",
       "name": "IdolComplex",
       "type": 3,
@@ -57,10 +111,37 @@
       "filterable": 1
     },
     {
+      "key": "jable_fixed",
+      "name": "JableTV",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/jable_fixed.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "lgzy_spider_hardened",
       "name": "蓝光资源·加固",
       "type": 3,
       "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/lgzy_spider_hardened.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "miaokan_spider",
+      "name": "秒看电影",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/miaokan_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "missav_spider",
+      "name": "MissAV",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/missav_spider.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
