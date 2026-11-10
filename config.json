@@ -1,0 +1,134 @@
+{
+  "spider": "",
+  "wallpaper": "",
+  "sites": [
+    {
+      "key": "16k_spider",
+      "name": "16k.club",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/16k_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "1anime_spider",
+      "name": "1anime",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/1anime_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "91sekk_spider",
+      "name": "91sekk",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/91sekk_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "asmrlib_spider",
+      "name": "asmrlib",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/asmrlib_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "bilifun_spider",
+      "name": "Bili影院",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/bilifun_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "hanime1_spider",
+      "name": "hanime1",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/hanime1_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "hongguo_spider_v2",
+      "name": "红果短剧",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/hongguo_spider_v2.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "idolcomplex_spider",
+      "name": "IdolComplex",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/idolcomplex_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "lgzy_spider_hardened",
+      "name": "蓝光资源·加固",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/lgzy_spider_hardened.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "pektino_spider",
+      "name": "pektino",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/pektino_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "pornhub_spider",
+      "name": "Pornhub",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/pornhub_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "redgifs_spider",
+      "name": "RedGIFs",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/redgifs_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "taiav_spider",
+      "name": "Taiav",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/taiav_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "twitthub_spider",
+      "name": "TwittHub",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/py/twitthub_spider.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    }
+  ],
+  "parses": [],
+  "lives": []
+}
