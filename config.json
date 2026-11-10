@@ -3,15 +3,6 @@
   "wallpaper": "",
   "sites": [
     {
-      "key": "16k_spider",
-      "name": "16k.club",
-      "type": 3,
-      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/16k_spider.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "1anime_spider",
       "name": "1anime",
       "type": 3,
@@ -52,15 +43,6 @@
       "name": "hanime1",
       "type": 3,
       "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/hanime1_spider.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "hongguo_spider_v2",
-      "name": "红果短剧",
-      "type": 3,
-      "api": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/hongguo_spider_v2.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
