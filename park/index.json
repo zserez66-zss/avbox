@@ -111,6 +111,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/asmrone.js",
       "sha256": "d86b6ee248edfefce6740887a0238c7a3ebae5d543e6e45b44fb7efb408d2b76",
       "apiVersion": 2
+    },
+    {
+      "key": "twihub",
+      "name": "TwiHub",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "TwiHub 推特视频保存榜：24小时/7天/30天榜与最新，MP4直链，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/twihub.js",
+      "sha256": "04f9548c67d1a22607f0830b78399426302caf59a1cae4f0226f9ac756b8c124",
+      "apiVersion": 2
     }
   ]
 }
