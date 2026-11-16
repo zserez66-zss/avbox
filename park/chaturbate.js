@@ -2,8 +2,10 @@
 // 列表走站方公开 roomlist 接口（limit/offset 分页，genders=f/m/c/s 过滤，
 // keywords= 为站方真搜索，匹配标签与用户名）；房间标题、封面、观看数均出自该接口。
 // 播放：/api/chatvideocontext/<用户名>/ 返回 hls_source（edge*.live.mmcdn.com 的
-// LL-HLS 主清单）；仅 room_status=public 且可匿名观看时返回，私密/收费/下线房间
-// 按协议要求报错，不伪造可播结果。不实现直播聊天（liveChat）。
+// LL-HLS 主清单），但清单带 EXT-X-PART / SERVER-CONTROL 低延迟分片，HentaiPark 的
+// 原生 HLS 管线不支持（真机实测报「HLS 使用了不支持的媒体格式」）。按协议的回退
+// 机制处理：videos() 对可达房间抛 UNSUPPORTED，应用随即自动回退 webVideo 用站方
+// 网页播放器播放（浏览器原生支持 LL-HLS）。不实现直播聊天（liveChat）。
 const BASE = 'https://chaturbate.com';
 const API = BASE + '/api/ts/roomlist/room-list/';
 const PAGE_SIZE = 30;
@@ -29,7 +31,7 @@ function roomItem(r) {
 Park.register({
   key: 'chaturbate',
   name: 'Chaturbate',
-  version: '0.0.1',
+  version: '0.0.2',
   minAppVersion: '0.9.2',
   type: 'video',
   category: 'live',
@@ -102,12 +104,18 @@ Park.register({
   },
 
   async videos(id) {
-    const d = await this.roomContext(id);
-    if (d.room_status !== 'public' || d.can_view_room === false || d.room_has_pass) {
-      throw Park.error('UNSUPPORTED', '房间当前不是公开直播');
-    }
-    const url = d.hls_source || '';
-    if (!/^https:\/\//.test(url)) throw Park.error('UNSUPPORTED', '直播间暂无可用播放地址');
-    return [{ url, format: 'hls', label: '直播', preferred: true, headers: { Referer: BASE + '/' } }];
+    // 先确认房间存在（不存在按 NOT_FOUND 报错，不触发网页回退）；
+    // 房间可达时一律 UNSUPPORTED —— 站方只有 LL-HLS 流，应用原生管线不支持，
+    // 抛此错误后应用会自动回退到下面的 webVideo 网页播放。
+    await this.roomContext(id);
+    throw Park.error('UNSUPPORTED', '该站直播为低延迟 HLS，应用原生播放暂不支持，已转网页播放');
+  },
+
+  async webVideo(id) {
+    return {
+      url: `${BASE}/${id}/`,
+      navigationDomains: ['chaturbate.com'],
+      frameDomains: [],
+    };
   },
 });
