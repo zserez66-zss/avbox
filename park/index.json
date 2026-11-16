@@ -145,11 +145,11 @@
     {
       "key": "cap17",
       "name": "17cap",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "minAppVersion": "0.9.2",
       "description": "17cap.cc 视频：最新与23个分类，m3u8播放，可搜索",
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/cap17.js",
-      "sha256": "a51855f13c3b17cc025b075f5fb02b57bc93a0e94626498007ed8fa0bc01275c",
+      "sha256": "db04917c8595afcabef1306de8d9e755a8f1bd0b929a4206d5e4a659f47af50f",
       "apiVersion": 2
     },
     {
