@@ -21,6 +21,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/tutu91.js",
       "sha256": "8da78c9b9e86aa6745c0888f4a56b6206b4ca32e383b151d23664b2a166e9add",
       "apiVersion": 2
+    },
+    {
+      "key": "taiav",
+      "name": "Taiav",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "taiav.com JAV与国产视频：最新/热门/分类，签名m3u8播放",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/taiav.js",
+      "sha256": "02ebbb2811769818fae8a74fd25bb3b07b1d8c699e628480b156e2755fe38a18",
+      "apiVersion": 2
     }
   ]
 }
