@@ -211,6 +211,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/nnhanman.js",
       "sha256": "a357354e103086d33640902c450ac8fdf824676d025ab9cd415abda0f02c52ea",
       "apiVersion": 2
+    },
+    {
+      "key": "kiutaku",
+      "name": "Kiutaku",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "Kiutaku 同人图集：最新/热门与标签流，子页拼接全图，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/kiutaku.js",
+      "sha256": "038557ba091988f50b8ed266838ff26163cc9360c88fb4265c77ef436a7519f5",
+      "apiVersion": 2
     }
   ]
 }
