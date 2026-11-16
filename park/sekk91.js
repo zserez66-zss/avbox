@@ -71,7 +71,7 @@ function parseEpisodes(doc) {
 Park.register({
   key: 'sekk91',
   name: '91sekk',
-  version: '0.0.1',
+  version: '0.0.2',
   minAppVersion: '0.9.2',
   type: 'video',
   category: 'adult',
@@ -80,7 +80,7 @@ Park.register({
   linkPatterns: ['91sekk\\.com(/mov/html/\\d+\\.html)'],
   imageHeaders: { Referer: BASE + '/' },
   network: { mode: 'auto' },
-  media: { mode: 'browser', scope: 'session', origin: BASE },
+  media: { mode: 'native', scope: 'session', origin: BASE },
   defaultFeed: 'online',
   feeds: [
     { key: 'online', label: '在线视频' },
