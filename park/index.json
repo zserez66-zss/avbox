@@ -1,0 +1,16 @@
+{
+  "name": "我的站点仓库",
+  "apiVersion": 2,
+  "sources": [
+    {
+      "key": "club16k",
+      "name": "16K图片资源库",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "16k.club 图集：最新与最佳榜，详情取原图",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/club16k.js",
+      "sha256": "e15977cf3faf7338777c64812f900c1cfcbd5f7b7670ee01f9e92d46f7b16e84",
+      "apiVersion": 2
+    }
+  ]
+}
