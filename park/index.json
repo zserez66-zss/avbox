@@ -171,6 +171,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/lgzy.js",
       "sha256": "9cf0f19ddcf98ebfe5969919fdc3b17fc60d6b5a2ca44ae030b4e686185d7977",
       "apiVersion": 2
+    },
+    {
+      "key": "pornhub",
+      "name": "Pornhub",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "Pornhub：热门/最新/分类流，HLS多档播放，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/pornhub.js",
+      "sha256": "aca7dc04cb6996756fa40a7b79177342bb18e88ad52a7a627affa500c379b599",
+      "apiVersion": 2
     }
   ]
 }
