@@ -201,6 +201,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/4khd.js",
       "sha256": "291757cfec6f22e070fedc7fb5b7955e752c8bee95beae8fa07bd0b47008e5b0",
       "apiVersion": 2
+    },
+    {
+      "key": "nnhanman",
+      "name": "鸟鸟韩漫",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "鸟鸟韩漫：热门/最新与分类，多话条漫，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/nnhanman.js",
+      "sha256": "a357354e103086d33640902c450ac8fdf824676d025ab9cd415abda0f02c52ea",
+      "apiVersion": 2
     }
   ]
 }
