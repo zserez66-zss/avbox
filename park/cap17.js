@@ -87,10 +87,48 @@ function playUrl(id, episode) {
   return `${BASE}/video/play/${id}-1-${episode}.html`;
 }
 
+// 按 EXT-X-DISCONTINUITY 把媒体清单切成组，挑正片组重建为无 discontinuity 的
+// 完整 VOD 清单：优先带 EXT-X-KEY 的组，否则分片最多的一组。KEY 的相对地址
+// 按清单 URL 补成绝对地址。重建失败返回空字符串（调用方回退为直出原清单）。
+function rebuildFeaturePlaylist(text, playlistUrl) {
+  const lines = String(text).split(/\r?\n/);
+  let targetDuration = '4';
+  const groups = [];
+  let group = { keyLine: '', entries: [] };
+  let pendingInf = '';
+  const pushGroup = () => { if (group.entries.length || group.keyLine) groups.push(group); };
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (line.startsWith('#EXT-X-TARGETDURATION:')) { targetDuration = line.split(':')[1] || '4'; continue; }
+    if (line.startsWith('#EXT-X-DISCONTINUITY')) { pushGroup(); group = { keyLine: '', entries: [] }; pendingInf = ''; continue; }
+    if (line.startsWith('#EXT-X-KEY:')) { group.keyLine = line; continue; }
+    if (line.startsWith('#EXTINF:')) { pendingInf = line; continue; }
+    if (line.startsWith('#')) continue;
+    group.entries.push({ inf: pendingInf || '#EXTINF:4.000000,', uri: line });
+    pendingInf = '';
+  }
+  pushGroup();
+  if (!groups.length) return '';
+  const feature = groups.find((g) => g.keyLine) || groups.slice().sort((a, b) => b.entries.length - a.entries.length)[0];
+  if (!feature || !feature.entries.length) return '';
+  let keyLine = feature.keyLine;
+  if (keyLine) {
+    keyLine = keyLine.replace(/URI="([^"]+)"/, (m, uri) => {
+      try { return 'URI="' + new URL(uri, playlistUrl).href + '"'; } catch (_) { return m; }
+    });
+  }
+  const out = ['#EXTM3U', '#EXT-X-VERSION:3', '#EXT-X-TARGETDURATION:' + targetDuration, '#EXT-X-MEDIA-SEQUENCE:0', '#EXT-X-PLAYLIST-TYPE:VOD'];
+  if (keyLine) out.push(keyLine);
+  for (const e of feature.entries) { out.push(e.inf, e.uri); }
+  out.push('#EXT-X-ENDLIST', '');
+  return out.join('\n');
+}
+
 Park.register({
   key: 'cap17',
   name: '17cap',
-  version: '0.0.1',
+  version: '0.0.2',
   minAppVersion: '0.9.2',
   type: 'video',
   category: 'adult',
@@ -101,7 +139,7 @@ Park.register({
   idPattern: '^\\d+$',
   imageHeaders: { Referer: BASE + '/' },
   network: { mode: 'auto', vpnHint: true },
-  media: { mode: 'browser', scope: 'session', origin: BASE },
+  media: { mode: 'native', scope: 'session', origin: BASE },
   defaultFeed: 'latest',
   feeds: [
     { key: 'latest', label: '最新' },
@@ -201,6 +239,17 @@ Park.register({
     const html = await this.http.text(url);
     const m3u8 = extractM3u8(html);
     if (!m3u8) throw Park.error('PARSE', '未解析到播放地址');
-    return [{ url: m3u8, format: 'hls', label: '原画', preferred: true }];
+    const plain = { url: m3u8, format: 'hls', label: '原画', preferred: true };
+    // 短剧清单带 EXT-X-DISCONTINUITY（未加密广告前贴 + AES-128 正片），而应用的
+    // 点播管线不支持 discontinuity（真机报「HLS 使用了不支持的媒体格式」）。
+    // 取到清单后按 discontinuity 切组，选带 EXT-X-KEY 的正片组（无则选最长组），
+    // 重建成无 discontinuity 的完整 VOD 清单经 hls.manifest 交给应用；正片 KEY 的
+    // IV 是显式全零，删掉广告前缀不影响解密。普通视频无此标记，原样直出。
+    let text = '';
+    try { text = await this.http.text(m3u8); } catch (_) { text = ''; }
+    if (!text.includes('#EXT-X-DISCONTINUITY')) return [plain];
+    const rebuilt = rebuildFeaturePlaylist(text, m3u8);
+    if (!rebuilt) return [plain];
+    return [{ ...plain, hls: { manifest: rebuilt } }];
   },
 });
