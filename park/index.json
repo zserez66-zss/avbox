@@ -151,6 +151,26 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/anime1.js",
       "sha256": "cfcab7a0c738acb0e8880c6159128cfcdba37b25267935f81cc1bea9af5bae64",
       "apiVersion": 2
+    },
+    {
+      "key": "cap17",
+      "name": "17cap",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "17cap.cc 视频：最新与23个分类，m3u8播放，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/cap17.js",
+      "sha256": "a51855f13c3b17cc025b075f5fb02b57bc93a0e94626498007ed8fa0bc01275c",
+      "apiVersion": 2
+    },
+    {
+      "key": "lgzy",
+      "name": "蓝光资源",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "蓝光资源影视：电影/连续剧/动漫/综艺，应用内网页播放，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/lgzy.js",
+      "sha256": "9cf0f19ddcf98ebfe5969919fdc3b17fc60d6b5a2ca44ae030b4e686185d7977",
+      "apiVersion": 2
     }
   ]
 }
