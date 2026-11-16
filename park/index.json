@@ -35,11 +35,11 @@
     {
       "key": "bilifun",
       "name": "Bili影院",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "minAppVersion": "0.9.2",
       "description": "bili-fun.com 影视：国产/AV/欧美/动漫分类，m3u8播放，可搜索",
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/bilifun.js",
-      "sha256": "b0a76cfa29a798c2d0cbd5d3d7c5c88bd4daf391b4a7d33be0fac1a53a0d3370",
+      "sha256": "53f1509b199561d0518e9ad58184b37a4f6bc14bdb7868fb391141052a31a807",
       "apiVersion": 2
     },
     {
