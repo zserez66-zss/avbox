@@ -101,6 +101,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/asmrhoney.js",
       "sha256": "f88eda33cec64f2bb4168b408f347ced863a9e80e0b5dca545481b9debc6e7d8",
       "apiVersion": 2
+    },
+    {
+      "key": "asmrone",
+      "name": "ASMR.one",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "ASMR.one 同人音声目录：热门/最新/评分，含字幕关联，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/asmrone.js",
+      "sha256": "d86b6ee248edfefce6740887a0238c7a3ebae5d543e6e45b44fb7efb408d2b76",
+      "apiVersion": 2
     }
   ]
 }
