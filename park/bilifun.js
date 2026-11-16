@@ -92,7 +92,7 @@ function pageInfo(doc, pattern, page, got) {
 Park.register({
   key: 'bilifun',
   name: 'Bili影院',
-  version: '0.0.1',
+  version: '0.0.2',
   minAppVersion: '0.9.2',
   type: 'video',
   category: 'adult',
@@ -102,7 +102,7 @@ Park.register({
   idPattern: '^(\\d+)$',
   imageHeaders: { Referer: BASE + '/' },
   network: { mode: 'auto', vpnHint: true },
-  media: { mode: 'browser', scope: 'session', origin: BASE },
+  media: { mode: 'native', scope: 'session', origin: BASE },
   defaultFeed: 'latest',
   feeds: [
     { key: 'latest', label: '最新' },
@@ -183,6 +183,24 @@ Park.register({
       if (m) m3u8 = m[1];
     }
     if (!m3u8) throw Park.error('UNSUPPORTED', '未解析到播放地址');
-    return [{ url: m3u8, format: 'hls', label: '原画', preferred: true }];
+    const plain = { url: m3u8, format: 'hls', label: '原画', preferred: true };
+    // 站方媒体清单由多批源拼接，带大量 EXT-X-DISCONTINUITY，而应用的点播管线
+    // 不支持 discontinuity（真机报「HLS 使用了不支持的媒体格式」）。取到媒体
+    // 清单后只删 discontinuity 标记行，其余（3 把 AES-128 密钥的轮换、2594 个
+    // 分片的顺序与地址）原样保留，经 hls.manifest 交给应用；所有 KEY 都带显式
+    // 全零 IV，删标记不影响解密。无 discontinuity 的清单原样直出。
+    try {
+      let mediaUrl = m3u8;
+      let text = await this.http.text(m3u8);
+      if (text.includes('#EXT-X-STREAM-INF')) {
+        const rel = text.split(/\r?\n/).find((l) => l.trim() && !l.startsWith('#'));
+        if (rel) { mediaUrl = new URL(rel.trim(), m3u8).href; text = await this.http.text(mediaUrl); }
+      }
+      if (text.includes('#EXT-X-DISCONTINUITY')) {
+        const stripped = text.split(/\r?\n/).filter((l) => !l.trim().startsWith('#EXT-X-DISCONTINUITY')).join('\n');
+        return [{ ...plain, url: mediaUrl, hls: { manifest: stripped } }];
+      }
+    } catch (_) { /* 取清单失败时回退为直出原地址 */ }
+    return [plain];
   },
 });
