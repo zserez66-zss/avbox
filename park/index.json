@@ -221,6 +221,66 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/kiutaku.js",
       "sha256": "038557ba091988f50b8ed266838ff26163cc9360c88fb4265c77ef436a7519f5",
       "apiVersion": 2
+    },
+    {
+      "key": "cosplaytele",
+      "name": "CosplayTele",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "CosplayTele 图集：最新与分类流，单图集多页，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/cosplaytele.js",
+      "sha256": "ae4200ab9628c98c06e8849039de7b83abb7abc3bfba8dd3b9a55a4566e816a3",
+      "apiVersion": 2
+    },
+    {
+      "key": "hanman18",
+      "name": "Hanman18",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "HANMAN18 韩漫：最新/最多观看/A-Z，多章阅读，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/hanman18.js",
+      "sha256": "7108a9896c6f22e28c221b7a9e810bd6deb2e10d87c644315552b7cb335203a2",
+      "apiVersion": 2
+    },
+    {
+      "key": "pornpics",
+      "name": "PornPics",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "PornPics 图集：热门/最新/评分/点赞与分类，/1280/ 全图，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/pornpics.js",
+      "sha256": "1539fa03dc369036cf679f453a458274ea56def80e76331e23741a1093ad497e",
+      "apiVersion": 2
+    },
+    {
+      "key": "jjmhw2",
+      "name": "漫小肆韓漫",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "漫小肆韓漫（jjmhw2）：最新/连载/完结与地区标签，多章阅读，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/jjmhw2.js",
+      "sha256": "033144e43522c772c256a7607d7e9d9b0bba171dcde147228832f82d62440a56",
+      "apiVersion": 2
+    },
+    {
+      "key": "rouman5",
+      "name": "肉漫屋",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "肉漫屋：全部/连载/完结漫画，多章阅读，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/rouman5.js",
+      "sha256": "77165b134a6c8fff70c23f5b7f8d0a8ff3d1cdc74e4cde7012bb59a706a7bb7b",
+      "apiVersion": 2
+    },
+    {
+      "key": "ikanmh",
+      "name": "漫小肆韓漫",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "漫小肆韓漫（ikanmh）：最新/连载/完结与题材，多章阅读，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/ikanmh.js",
+      "sha256": "187a2ddbc8ceecbc0010dc6de9f4eee297792eb021460ab769f0b72d9e053256",
+      "apiVersion": 2
     }
   ]
 }
