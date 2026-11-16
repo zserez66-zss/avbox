@@ -61,6 +61,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/sekk91.js",
       "sha256": "b4d62c474ee4d272758a3a002d22966322d7944f6c256df36d7740ee07f226cc",
       "apiVersion": 2
+    },
+    {
+      "key": "idolcomplex",
+      "name": "IdolComplex",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "IdolComplex 图集：Sankaku帖子流，父子帖自动成组，标签搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/idolcomplex.js",
+      "sha256": "b2d36e400e57cb2a2faba36279460212153f8306525cb2525ec300e3d81ecb09",
+      "apiVersion": 2
     }
   ]
 }
