@@ -285,11 +285,11 @@
     {
       "key": "chaturbate",
       "name": "Chaturbate",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "minAppVersion": "0.9.2",
-      "description": "Chaturbate 公开直播：热门与女/男/情侣/变性分区，标签与用户名搜索，公开房间 HLS 直播",
+      "description": "Chaturbate 公开直播：热门与女/男/情侣/变性分区，标签与用户名搜索；站方为低延迟 HLS，播放走应用内网页播放器",
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/chaturbate.js",
-      "sha256": "38b5b4adadff3cf8efe841afe6bdca8078f4817f7abd6cd5a63ae72b405e6c09",
+      "sha256": "5f75ebd97a0638e78830c61175d3d02121eff4aeb7cdf2ad90eee35e202d4e9d",
       "apiVersion": 2
     }
   ]
