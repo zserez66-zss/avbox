@@ -51,6 +51,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/redgifs.js",
       "sha256": "27d7d41a25430a3ebe61280c244c57bec04aec13cec749262127da9da47ad4c1",
       "apiVersion": 2
+    },
+    {
+      "key": "sekk91",
+      "name": "91sekk",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "91sekk.com 在线视频与精彩电影：m3u8播放，无站内搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/sekk91.js",
+      "sha256": "b4d62c474ee4d272758a3a002d22966322d7944f6c256df36d7740ee07f226cc",
+      "apiVersion": 2
     }
   ]
 }
