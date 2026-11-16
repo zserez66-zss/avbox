@@ -181,6 +181,16 @@
       "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/pornhub.js",
       "sha256": "aca7dc04cb6996756fa40a7b79177342bb18e88ad52a7a627affa500c379b599",
       "apiVersion": 2
+    },
+    {
+      "key": "twitthub",
+      "name": "TwittHub",
+      "version": "0.0.1",
+      "minAppVersion": "0.9.2",
+      "description": "TwittHub 推特视频流：FixTweet解析twimg直链MP4，可搜索",
+      "url": "https://cdn.jsdelivr.net/gh/zserez66-zss/avbox@main/park/twitthub.js",
+      "sha256": "b0c59b03dcfb182bcb8461c4604c2d5fe88e01ad94ba3dadaa9ae6edbb853b5d",
+      "apiVersion": 2
     }
   ]
 }
